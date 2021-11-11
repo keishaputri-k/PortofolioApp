@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/profileFragment">
+    <fragment
+        android:id="@+id/androidFragment"
+        android:name="com.kei.portofolioapp.ui.android.AndroidFragment"
+        android:label="fragment_android"
+        tools:layout="@layout/fragment_android" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kei.portofolioapp.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.kei.portofolioapp.ui.experience.ExperienceFragment"
+        android:label="fragment_experience"
+        tools:layout="@layout/fragment_experience" >
+        <action
+            android:id="@+id/action_experienceFragment_to_detailExperiencesFragment"
+            app:destination="@id/detailExperiencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flutterFragment"
+        android:name="com.kei.portofolioapp.ui.FlutterFragment"
+        android:label="fragment_flutter"
+        tools:layout="@layout/fragment_flutter" />
+    <fragment
+        android:id="@+id/uiUxFragment"
+        android:name="com.kei.portofolioapp.ui.UiUxFragment"
+        android:label="fragment_ui_ux"
+        tools:layout="@layout/fragment_ui_ux" />
+    <fragment
+        android:id="@+id/detailExperiencesFragment"
+        android:name="com.kei.portofolioapp.ui.experience.DetailExperiencesFragment"
+        android:label="fragment_detail_experiences"
+        tools:layout="@layout/fragment_detail_experiences">
+        <argument
+            android:name="experience"
+            app:argType="com.kei.PortofolioApp.data.experience.Experience" />
+    </fragment>
+</navigation>
