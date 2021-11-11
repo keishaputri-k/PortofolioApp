@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_ui_ux" />
     <fragment
         android:id="@+id/detailExperiencesFragment"
-        android:name="com.kei.portofolioapp.ui.experience.DetailExperiencesFragment"
+        android:name="com.kei.portofolioapp.ui.experience.DetailExperienceFragment"
         android:label="fragment_detail_experiences"
         tools:layout="@layout/fragment_detail_experiences">
         <argument
